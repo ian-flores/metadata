@@ -2,12 +2,12 @@ Package: metadata
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Ian",
+           family = "Flores Siaca",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "iflores.siaca@rstudio.com",
+           comment = c(ORCID = "0000-0002-7573-0708"))
+Description: This package handles metadata in RMarkdown documents in conjunction with RStudio Connect.
 License: MIT + file LICENSE
 Suggests: 
     testthat
@@ -15,3 +15,11 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    cli,
+    httr,
+    rsconnect,
+    glue,
+    purrr,
+    stringr,
+    rmarkdown
