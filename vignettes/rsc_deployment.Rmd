@@ -1,0 +1,63 @@
+---
+title: "Deployment to RStudio Connect"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rsc_deployment}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+options(rmarkdown.html_vignette.check_title = FALSE)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+### 1. Install the metadata package
+
+```{r installation, eval=FALSE}
+remotes::install_github("ian-flores/metadata")
+```
+
+
+```{r setup}
+library(metadata)
+```
+
+### 2. Set the credentials to authenticate with Connect
+
+```{r credentials}
+Sys.setenv("CONNECT_SERVER" = "XXXXX")
+Sys.setenv("CONNECT_API_KEY" = "XXXXX")
+```
+
+### 3. Publish the RMarkdown document
+
+```{r publish}
+rmarkdown_file <- "../../metadata-development/metadata-rmd.Rmd"
+
+meta_publish_rmd(rmarkdown_file, 
+                 name = "test_deployment",
+                 description = "This is a test deployment of the metadata pkg",
+                 title = "Test Deployment")
+```
+
+```r
+── Deploying ── <file_name>.Rmd ───────────────────────────────────────────────────────────────
+ℹ Discovered 3 tags defined in the RMarkdown document
+ℹ Discovered 10 tags defined in the RStudio Connect server
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+x These tags do not exist in RStudio Connect so they will not be assigned to the document: Finance, Sales, and
+  Quarterly Report
+✓ These tags exist in RStudio Connect so they will be assigned to the document: Education, Intermediate, and
+  Modelling
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+✓ Succesfully created content in RStudio Connect with content ID: XXX
+✓ Succesfully deployed content to RStudio Connect with bundle ID: XXX
+✓ Succesfully assigned tags to content in RStudio Connect
+
+── Deployment succesfull. Bye now! ────────────────────────────────────────────────────────────────────────────────────────
+```

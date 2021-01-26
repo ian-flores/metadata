@@ -10,7 +10,8 @@ Authors@R:
 Description: This package handles metadata in RMarkdown documents in conjunction with RStudio Connect.
 License: MIT + file LICENSE
 Suggests: 
-    testthat
+    testthat,
+    knitr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -23,3 +24,4 @@ Imports:
     purrr,
     stringr,
     rmarkdown
+VignetteBuilder: knitr

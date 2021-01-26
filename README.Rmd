@@ -28,30 +28,35 @@ The goal of metadata is to ...
 You can install the released version of metadata from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("metadata")
+remotes::install_github("metadata")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+### Load the library
 
-```{r example}
+```{r}
 library(metadata)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+### Set up the credentials
 
-```{r cars}
-summary(cars)
+```{r}
+Sys.setenv("CONNECT_SERVER" = "XXXXX")
+Sys.setenv("CONNECT_API_KEY" = "XXXXX")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+### Add tags to your document
 
-You can also embed plots, for example:
+You add tags to your document under the `metadata.tags` key.
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+![](assets/yaml_header.png)
+
+### Publish RMarkdown documents
+
+```{r}
+meta_publish_rmd(<rmd_file_path>, 
+                 name = "rmd_deployment",
+                 description = "This is a test deployment of the metadata pkg",
+                 title = "RMarkdown Deployment")
 ```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
