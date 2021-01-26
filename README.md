@@ -41,7 +41,19 @@ Sys.setenv("CONNECT_API_KEY" = "XXXXX")
 
 You add tags to your document under the `metadata.tags` key.
 
-![](assets/yaml_header.png)
+``` yaml
+title: "metadata-rmd"
+author: "Ian Flores Siaca"
+date: "1/4/2021"
+output: html_document
+metadata:
+  tags:
+    - Education:
+      - Intermediate: Modelling
+    - Sales
+    - Finance:
+      - Quarterly Report
+```
 
 ### Publish RMarkdown documents
 
