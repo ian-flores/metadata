@@ -104,15 +104,25 @@
 <h3 class="hasAnchor">
 <a href="#add-tags-to-your-document" class="anchor"></a>Add tags to your document</h3>
 <p>You add tags to your document under the <code>metadata.tags</code> key.</p>
-<p><img src="assets/yaml_header.png"></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"metadata-rmd"</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Ian Flores Siaca"</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"1/4/2021"</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="fu">metadata</span><span class="kw">:</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="at">  </span><span class="fu">tags</span><span class="kw">:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">Education</span><span class="kw">:</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">Intermediate</span><span class="kw">:</span><span class="at"> Modelling</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Sales</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">Finance</span><span class="kw">:</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="at">      </span><span class="kw">-</span><span class="at"> Quarterly Report</span></span></code></pre></div>
 </div>
 <div id="publish-rmarkdown-documents" class="section level3">
 <h3 class="hasAnchor">
 <a href="#publish-rmarkdown-documents" class="anchor"></a>Publish RMarkdown documents</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">meta_publish_rmd</span>(<span class="op">&lt;</span>rmd_file_path<span class="op">&gt;</span>, </span>
-<span id="cb4-2"><a href="#cb4-2"></a>                 <span class="dt">name =</span> <span class="st">"rmd_deployment"</span>,</span>
-<span id="cb4-3"><a href="#cb4-3"></a>                 <span class="dt">description =</span> <span class="st">"This is a test deployment of the metadata pkg"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4"></a>                 <span class="dt">title =</span> <span class="st">"RMarkdown Deployment"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">meta_publish_rmd</span>(<span class="op">&lt;</span>rmd_file_path<span class="op">&gt;</span>, </span>
+<span id="cb5-2"><a href="#cb5-2"></a>                 <span class="dt">name =</span> <span class="st">"rmd_deployment"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>                 <span class="dt">description =</span> <span class="st">"This is a test deployment of the metadata pkg"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>                 <span class="dt">title =</span> <span class="st">"RMarkdown Deployment"</span>)</span></code></pre></div>
 </div>
 </div>
 </div>
